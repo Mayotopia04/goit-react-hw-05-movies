@@ -1,6 +1,7 @@
 import { useEffect, useState, Suspense } from "react";
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import { fetchMovieDetails } from "../../services/themoviedb-api";
+// import { HiChevronLeft } from "react-icons/hi";
 import { Button } from "components/Button/Button";
 import { Loader } from "components/Loader/Loader";
 import css from "./MovieDetailsPage.module.css";
@@ -29,7 +30,8 @@ const MovieDetailsPage = () => {
     return (
         <>
             <Link to={backLinkHref}>
-                <Button text="← Go back" />
+                <Button text="< Go back"
+                />
             </Link>
 
             <div className={css.movieDetailsContainer}>
