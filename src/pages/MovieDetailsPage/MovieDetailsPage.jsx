@@ -1,7 +1,8 @@
 import { useEffect, useState, Suspense } from "react";
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import { fetchMovieDetails } from "../../services/themoviedb-api";
-// import { HiChevronLeft } from "react-icons/hi";
+// import { FaChevronLeft } from "react-icons/fa";
+import { AiFillCaretLeft } from "react-icons/ai";
 import { Button } from "components/Button/Button";
 import { Loader } from "components/Loader/Loader";
 import css from "./MovieDetailsPage.module.css";
@@ -30,8 +31,12 @@ const MovieDetailsPage = () => {
     return (
         <>
             <Link to={backLinkHref}>
-                <Button text="< Go back"
-                />
+                <Button
+                    className={css.btnLink}
+                    text="Go back"
+                    position="left">
+                <AiFillCaretLeft />
+                </Button>
             </Link>
 
             <div className={css.movieDetailsContainer}>
